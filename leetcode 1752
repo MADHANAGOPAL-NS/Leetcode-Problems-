@@ -1,0 +1,43 @@
+1752. Check if Array Is Sorted and Rotated
+Solved
+Easy
+Topics
+premium lock icon
+Companies
+Hint
+Given an array nums, return true if the array was originally sorted in non-decreasing order, then rotated some number of positions (including zero). Otherwise, return false.
+
+There may be duplicates in the original array.
+
+Note: An array A rotated by x positions results in an array B of the same length such that B[i] == A[(i+x) % A.length] for every valid index i.
+
+ 
+
+Example 1:
+
+Input: nums = [3,4,5,1,2]
+Output: true
+Explanation: [1,2,3,4,5] is the original sorted array.
+You can rotate the array by x = 3 positions to begin on the element of value 3: [3,4,5,1,2].
+Example 2:
+
+Input: nums = [2,1,3,4]
+Output: false
+Explanation: There is no sorted array once rotated that can make nums.
+Example 3:
+
+Input: nums = [1,2,3]
+Output: true
+Explanation: [1,2,3] is the original sorted array.
+You can rotate the array by x = 0 positions (i.e. no rotation) to make nums.
+
+
+
+
+
+Problem intution:
+
+At first i have no idea to solve this prblm after 5 mins i got an logical idea that is why if we sort the given array and take the first element and put it in the last and again take the first element and put in the last untill when my array is eaual to the given array i will do this operation okay what if the process doesnt stops i mean if the manipulating arrray is not equal to the array at that time i will check by keeping a variable named 'count' if count crosses the length of thae array i will stop and return False this is my overall intution
+
+This problem is done using recursion
+ 
