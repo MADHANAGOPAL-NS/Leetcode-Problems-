@@ -1,0 +1,38 @@
+You are implementing a simplified version of Spotify’s Recently Played feature. Your task is to maintain a list of the last K unique songs played, following these rules:
+1.
+When a new song is played:
+o
+If it already exists in the list, move it to the front (most recently played position).
+o
+If it is new and the list has fewer than K songs, add it to the front.
+o
+If it is new and the list is full, remove the least recently played song (the last element in the list), then add the new song to the front.
+Input Format
+•
+The first line contains an integer K — the maximum number of songs in the list.
+•
+The second line contains an integer N — the total number of songs played.
+•
+The third line contains N integers — the IDs of the songs played in the given order.
+Output Format
+•
+Print the IDs of the songs in the list from the most recently played to the least recently played, separated by spaces.
+
+Intution:
+Input K → the maximum number of elements temp (cache) can store.
+
+Initialize an empty list temp.
+
+Iterate through each element in lst:
+3.1. If temp is empty → directly append the current element.
+3.2. Else if length of temp is less than or equal to k:
+- If the current element is not in temp:
+- Insert it at the front of temp.
+- Else (element already in temp):
+- Find its index.
+- Insert the same element at the front.
+- Remove the old occurrence from its previous position.
+3.3. If after insertion, temp length exceeds k:
+- Remove the last element in temp.
+
+After the loop ends, print temp.
