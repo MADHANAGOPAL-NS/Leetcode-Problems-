@@ -10,4 +10,4 @@ class Solution:
                 var.pop(index)
                 return sort_nums(nums ,var , index , count+1)
         var = sorted(nums)
-        return sort_nums(nums , var , 0 ,0)
+        return sort_nums(nums , var , 0 , 0)
