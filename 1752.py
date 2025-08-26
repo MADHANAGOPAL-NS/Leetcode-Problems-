@@ -1,13 +1,13 @@
 class Solution:
     def check(self, nums: List[int]) -> bool:
-        def sort_nums(nums ,var , index , count):
-            if var == nums:
+        def sort_nums(nums ,var1 , index , count):
+            if var1 == nums:
                 return True
-            elif count >= len(var):
+            elif count >= len(var1):
                 return False
             else:
-                var.append(var[index])
-                var.pop(index)
-                return sort_nums(nums ,var , index , count+1)
-        var = sorted(nums)
-        return sort_nums(nums , var , 0 , 0)
+                var1.append(var1[index])
+                var1.pop(index)
+                return sort_nums(nums ,var1 , index , count+1)
+        var1 = sorted(nums)
+        return sort_nums(nums , var1 , 0 , 0)
